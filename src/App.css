@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
-}
+/* ===== Outfit Font ======= */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
 }
+:root{
+  --bg-color: #EFF1F4;
+  --second-bg-color: #E9EFF6;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  --white-color: #FFFFFF;
+  --blue-color: #3451E5;
+
+  --dark-blue: #21264D;
+  --error-color: #CE2E2E;
+  --text-color: #7D476C
 }
-
-.App-header {
-  background-color: #282c34;
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
+  padding: 20px;
+
+  background-color: var(--bg-color);
+  /* background: url("/bg.jpg"); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.box-container{
+  position: relative;
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 30px;
+  box-shadow: 0px 30px 30px 20px rgba(23, 23, 23, 0.08);
+}
+.login-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 370px;
+  width: 100%;
+  height: 600px;
+}
+.login-container .form-title{
+  text-align: center;
+  margin-block: 20px 60px;
+  color: var(--text-color);
+}
+.form-title span{
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 50px;
+}
+.form-title p{
+  font-size: 14px;
+  font-weight: 300;
+}
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+}
+.password-input{
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 20px 50px;
+  background: var(--second-bg-color);
+  border-radius: 14px;
+}
+
+.inputs{
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+}
+.input-field{
+  font-size: 16px;
+  padding-inline: 20px 50px;
+  background: var(--second-bg-color);
+  color: var(--text-color);
+}
+::placeholder{
+  color: var(--text-color);
+}
+.forgot-pass{
+  display: flex;
+  justify-content: right;
+  margin-top: 5px;
+}
+.forgot-pass a{
+  color: #7C8083;
+  font-size: 14px;
+  font-weight: 500;
+}
+.forgot-pass a:hover{
+  text-decoration: underline;
+}
+.btn{
+  font-size: 15px;
+  color: var(--white-color);
+  outline: none;
+  transition: .3s;
+  cursor: pointer;
+}
+.submit-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: var(--blue-color);
+  margin-top: 40px;
+  box-shadow: -10px 30px 50px 0 rgba(15, 40, 161, 0.3);
+}
+.btn:hover{
+  gap: 15px;
+  background: var(--dark-blue);
+}
+.form-bottom-links{
+  display: flex;
+  justify-content: center;
+}
+.login-container .form-bottom-links{
+  margin-block: 60px 20px;
+}
+.form-bottom-links span{
+  color: var(--text-color);
+}
+.form-bottom-links .bottom-link{
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+/* ====== Register Form Style ======= */
+
+.register-container{
+  max-width: 370px;
+  width: 100%;
+}
+.register-container .form-title{
+  text-align: center;
+  margin-block: 0 40px;
+  color: var(--text-color);
+}
+.register-container .form-bottom-links{
+  margin-block: 45px 20px;
+}
+/* ============== Error Message ================ */
+
+.error-message{
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f0f0f0;
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+  width: 80%;
+  text-align: center;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.register-container .error-message{
+  top: 80px;
+  font-size: 15px;
+}
+/* ====== Home Container ======= */
+.home-container{
+  max-width: 470px;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--dark-blue);
+}
+.row-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.username span{
+  font-size: 24px;
+  font-weight: 600;
+}
+.home-container .btn{
+  background: var(--blue-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14px;
+}
+.user-info-box{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  background: var(--second-bg-color);
+  width: 100%;
+  padding: 20px;
+  border-radius: 14px;
 }
-
-.App-link {
-  color: #61dafb;
+.one-row p{
+  margin-top: 40px;
+  text-align: center;
 }
+.link, .link:hover{
+  color: var(--white-color);
+}
+/* ========= responsive =========== */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 432px) {
+  .home-container .bottom-row{
+    flex-direction: column;
+    margin-top: 30px;
   }
-  to {
-    transform: rotate(360deg);
+  .register-container .error-message{
+    top: 70px;
   }
 }
