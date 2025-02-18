@@ -151,11 +151,13 @@ const Signup = () => {
                     <input type="number" name="phone" className="inputs input-field" placeholder="Phone" value={formData.phone} onChange={handleChange} />
                     {errors.phone && <p className="error-text">{errors.phone}</p>}
                 </div>
-                <div className="input-box password-input">
-                    <input type={showPassword ? "text" : "password"} name="password" className="inputs input-field" placeholder="Password" value={formData.password} onChange={handleChange} />
-                    <span className="eye-icon" onClick={togglePasswordVisibility}>
-                        {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />} {/* Eye icon toggle */}
-                    </span>
+                <div className="input-box ">
+                    <div className="password-input">
+                        <input type={showPassword ? "text" : "password"} name="password" className="inputs input-field" placeholder="Password" value={formData.password} onChange={handleChange} />
+                        <span className="eye-icon" onClick={togglePasswordVisibility}>
+                            {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />} {/* Eye icon toggle */}
+                        </span>
+                    </div>
                     {errors.password && <p className="error-text">{errors.password}</p>}
                 </div>
             </div>

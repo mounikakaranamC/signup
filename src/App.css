@@ -172,6 +172,9 @@ body{
   border-radius: 14px;
   padding: 10px;
 }
+.error-text{
+  display: flex;
+}
 
 .register-container .error-message{
   top: 80px;

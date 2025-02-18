@@ -85,14 +85,16 @@ const Signin = () => {
                     <input type="text"  name="name" className="inputs input-field" placeholder="Name" value={formData.name} onChange={handleChange} />
                     {errors.name && <p className="error-text">{errors.name}</p>}
                 </div>
-                <div className="input-box password-input">
-                    <input type={passwordVisible ? "text" : "password"} name="password" className="inputs input-field" placeholder="Password" value={formData.password} onChange={handleChange} />
-                    <span
-                        className="eye-icon"
-                        onClick={() => setPasswordVisible(!passwordVisible)}
-                    >
-                        {passwordVisible ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
-                    </span>
+                <div className="input-box ">
+                    <div className="password-input">
+                        <input type={passwordVisible ? "text" : "password"} name="password" className="inputs input-field" placeholder="Password" value={formData.password} onChange={handleChange} />
+                        <span
+                            className="eye-icon"
+                            onClick={() => setPasswordVisible(!passwordVisible)}
+                        >
+                            {passwordVisible ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+                        </span>
+                    </div>
                     {errors.password && <p className="error-text">{errors.password}</p>}
                 </div>
             </div>
